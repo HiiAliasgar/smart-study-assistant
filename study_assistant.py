@@ -22,7 +22,7 @@ class EnhancedStudyAssistant:
             raise ValueError("deadline_days must be a positive integer.")
 
         sessions_per_week = min(7, hours_per_week)
-        hours_per_session = hours_per_week / sessions_per_week
+        hours_per_session = round(hours_per_week / sessions_per_week, 2)
         total_weeks = math.ceil(deadline_days / 7)
         full_weeks, remaining_days = divmod(deadline_days, 7)
         total_sessions = sessions_per_week * full_weeks + min(sessions_per_week, remaining_days)
