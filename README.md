@@ -1,6 +1,6 @@
-# Smart Study Assistant
+# Smart Study Assistant (Rule-Based Prototype)
 
-A Python learning-support project developed for the Agents Intensive capstone (Agents for Good — Education track). It explores how a single assistant can help a learner plan study sessions, find resources, record progress and ask study questions.
+A Python learning-support prototype developed for the Agents Intensive capstone (Agents for Good — Education track). It provides deterministic study planning, a small static resource catalogue and local progress tracking. It does not currently use an AI model or multiple agents.
 
 ## Problem
 
@@ -8,12 +8,12 @@ Learners often need help turning a broad learning goal into a manageable plan. T
 
 ## Project capabilities
 
-The repository describes an assistant with methods for:
+The application currently provides:
 
 - Creating a study plan from a subject, weekly study hours and a deadline.
 - Recommending learning resources for a topic and level.
 - Recording completed sessions and optional scores.
-- Answering study-support questions.
+- Returning an explicit placeholder for study-support questions (no AI tutor is connected).
 - Producing a summary of the current session's tracked progress.
 
 ## Example
@@ -50,6 +50,9 @@ print(assistant.get_summary())
 git clone https://github.com/HiiAliasgar/smart-study-assistant.git
 cd smart-study-assistant
 python study_assistant.py
+
+# Run the tests
+python -m unittest discover -s tests -v
 ```
 
 Check the source code for the current runtime dependencies and available entry points.
@@ -61,6 +64,6 @@ Check the source code for the current runtime dependencies and available entry p
 - Study planning and progress-tracking logic
 - Resource recommendation and question-support methods
 
-This repository is a learning prototype. The README's described functionality should not be interpreted as a validated adaptive-learning model, a 24/7 hosted service, or a production multi-agent platform.
+This repository is a local rule-based learning prototype. Study plans and progress summaries are simple heuristics, not an adaptive-learning model. Resource suggestions are a small static catalogue. The support method is a placeholder and does not call an LLM or provide a 24/7 service.
 
 [Source code](https://github.com/HiiAliasgar/smart-study-assistant)
